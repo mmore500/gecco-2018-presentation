@@ -1,26 +1,115 @@
 \appendix
 
+\begin{frame}{For More Information}
+
+\vspace{1ex}
+
+{\HUGE\url{https://osf.io/n92c7/}}
+
+\vspace{3ex}
+
+\begin{itemize}
+\item source code
+\item data
+\item figures and graphics
+\item how-to-replicate tutorial
+\item publication
+\item slides
+\item blog article
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{People}
+
+\vspace{1ex}
+
+\begin{columns}
+\begin{column}{0.25\textwidth}
+  \centering
+  \includegraphics[width=0.7\textwidth,trim={0 15 0 15},clip]{moreno}
+\end{column}
+\begin{column}{0.75\textwidth}
+  \textbf{Matthew Andres Moreno}
+
+  \href{https://twitter.com/MorenoMatthewA}{{\faTwitter} @MorenoMatthewA}
+
+  \href{https://mmore500.github.io}{{\faGlobe} \texttt{https://mmore500.github.io}}
+
+  \href{mailto: mmore500@msu.edu}{{\faEnvelope} \texttt{mmore500@msu.edu}}
+
+\end{column}
+\end{columns}
+
+\vspace{1ex}
+
+\begin{columns}
+\begin{column}{0.25\textwidth}
+  \centering
+  \includegraphics[width=0.7\textwidth,trim={0 100 0 50},clip]{banzhaf}
+\end{column}
+
+\begin{column}{0.75\textwidth}
+  \textbf{Wolfgang Banzhaf}
+
+  \href{http://www.cse.msu.edu/~banzhafw/}{{\faGlobe} \texttt{http://www.cse.msu.edu/\textasciitilde{}banzhafw/}}
+
+  \href{mailto: banzhafw@msu.edu}{{\faEnvelope} \texttt{banzhafw@msu.edu}}
+
+\end{column}
+\end{columns}
+
+\vspace{1ex}
+
+\begin{columns}
+\begin{column}{0.25\textwidth}
+  \centering
+  \includegraphics[width=0.7\textwidth]{ofria}
+\end{column}
+
+\begin{column}{0.75\textwidth}
+  \textbf{Charles Ofria}
+
+  \href{https://twitter.com/CharlesOfria}{{\faTwitter} @CharlesOfria}
+
+  \href{https://ofria.com}{{\faGlobe} \texttt{https://ofria.com}}
+
+  \href{mailto: ofria@msu.edu}{{\faEnvelope} \texttt{ofria@msu.edu}}
+
+\end{column}
+\end{columns}
+
+\end{frame}
+
 \begin{frame}{Acknowledgements}
 \begin{itemize}
-\item DEAP \cite{Fortin2012DEAP:Easy}
-\item nice people
+\item Distributed Evolutionary Algorithms for Python
+package \cite{fortin2012deap}
+\item PyTorch Deep Learning framework \cite{paszke2017pytorch}
+\item Open Science Framework via the Center for Open Science
+\item computational resources via Michigan State University's Institute for Cyber-Enabled Research
+\item computational resources via Google Cloud Compute
 \end{itemize}
-\vspace{-1ex}
 
-\newcommand{\innerspacer}{0.1\textwidth}
-\newcommand{\content}{0.3\textwidth}
-\newcommand{\outerspacer}{0.15\textwidth}
+\vfill
 
+\newcommand{\innerspacer}{0.07\textwidth}
+\newcommand{\content}{0.24\textwidth}
+\newcommand{\outerspacer}{0.07\textwidth}
 
 \begin{center}
  \begin{columns}
 	\begin{column}{\outerspacer}~\end{column}
 	 \begin{column}{\content}
+		\includegraphics[width=\textwidth]{NSF-logo}
+ 	\end{column}
+  \begin{column}{\innerspacer}~\end{column}
+	 \begin{column}{\content}
 		\includegraphics[width=\textwidth]{BEACON-logo}
  	\end{column}
   \begin{column}{\innerspacer}~\end{column}
  	\begin{column}{\content}
-   \includegraphics[width=\textwidth]{MSU-helmet}
+   \includegraphics[width=0.75\textwidth]{MSU-helmet}
  	\end{column}
  	\begin{column}{\outerspacer}~\end{column}
  \end{columns}
@@ -37,6 +126,24 @@
 
   \bibliography{bibl}
   \setbeamertemplate{bibliography item}{\insertbiblabel}
-  %\nocite{*} % Insert publications even if they are not cited in the poster
+  % \nocite{*} % Insert publications even if they are not cited in the poster
   \bibliographystyle{apalike}
+\end{frame}
+
+\begin{frame}{G-P Map Implementations: Toy}
+
+\begin{columns}
+\begin{column}{0.5\textwidth}
+100-to-100 fully-connected layer
+graphic: TODO
+\begin{itemize}
+\item intuition: averaging
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+graphic: TODO
+intuition: single underlying value
+\end{column}
+\end{columns}
+
 \end{frame}

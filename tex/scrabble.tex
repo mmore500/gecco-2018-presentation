@@ -1,0 +1,111 @@
+\section{Experiment: Scrabble String Problem}
+
+\begin{frame}{Problem Definition}
+\textbf{phenotype:} 100-letter string with characters a,b,\dots,z,``~''
+\vspace{2ex}
+\pause
+
+\textbf{fitness:} count of characters contained in valid Scrabble words
+\begin{itemize}
+\item best fitness = long valid words
+\end{itemize}
+
+\vspace{2ex}
+\pause
+
+\textbf{rugged fitness landscape:}
+short words are difficult to combine without becoming invalid
+
+\end{frame}
+
+\begin{frame}{Denoiser Genotype-Phenotype Map Implementation}
+
+\input{fig/scrabble_denoiser_in_action.tex}
+
+\end{frame}
+
+\begin{frame}{Training Pipeline}
+
+\centering \Large
+
+\textcolor{h2}{$\downarrow$ evolve word strings with direct encoding $\downarrow$}
+
+\dots\texttt{ns fed oxo sob }\dots
+
+\pause
+
+\textcolor{h2}{$\downarrow$ corrupt letter (sometimes) $\downarrow$}
+
+\dots\texttt{ns fed \fbox{p}xo sob }\dots
+
+\pause
+
+\textcolor{h2}{$\downarrow$ autoencoder guesses original letter $\downarrow$}
+
+\texttt{\fbox{o}}
+
+\pause
+
+\textcolor{h2}{$\downarrow$ check guess $\downarrow$}
+
+if wrong, adjust autoencoder
+
+\end{frame}
+
+\begin{frame}{Intuition: Denoising G-P Map = Glorified Spell Checker}
+
+\begin{figure}
+
+\centering \Huge
+
+\only<1>{
+
+\dots\texttt{ns fed \fbox{o}xo sob }\dots
+
+$\downarrow$
+
+\texttt{\fbox{o}}
+
+}
+
+% \only<2>{
+%
+% \dots\texttt{la lob \fbox{\phantom{0}}re as s}\dots
+%
+% $\downarrow$
+%
+% \texttt{\fbox{o}}
+%
+% }
+
+\only<2>{
+
+\dots\texttt{lk y ag\fbox{x}r sned }\dots
+
+$\downarrow$
+
+\texttt{\fbox{a}}
+
+}
+
+\vspace{1ex}
+
+\caption{
+Example input-output pairs from trained Scrabble denoising autoencoder.
+}
+
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Result: Viability under Mutation}
+
+\input{fig/scrabble_fit_diff_vs_step.tex}
+
+\end{frame}
+
+\begin{frame}{Result: Novelty under Mutation}
+
+\input{fig/scrabble_dist_vs_step.tex}
+
+\end{frame}

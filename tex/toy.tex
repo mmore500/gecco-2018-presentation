@@ -1,0 +1,77 @@
+\section{Experiment: Toy Problem}
+
+\begin{frame}{Problem Definition}
+
+\textbf{phenotype:} vector $\vec{x}$ of 100 float values
+\begin{itemize}
+\item leg lengths of 100-legged ``table''
+\end{itemize}
+
+\vspace{2ex}
+\pause
+
+\textbf{fitness:} $-\sigma(\vec{x})$
+\begin{itemize}
+\item best fitness = level table
+\end{itemize}
+
+\vspace{2ex}
+\pause
+
+\textbf{rugged fitness landscape:}
+any level table is a local fitness peak
+
+\end{frame}
+
+\begin{frame}{Preparing Autoencoders}
+
+\Large
+
+\begin{itemize}[<+->]
+\item make training data
+\pause
+\begin{itemize}[<+->]
+\item evolved 250 independent 300-individual populations
+\item using direct encoding
+\end{itemize}
+\vspace{1ex}
+\item train autoencoders
+\pause
+\begin{itemize}[<+->]
+\item bottleneck learns to map one value to all leg lengths
+\item denoising learns to set leg lengths to mean leg length
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Experimental Procedure: Response to Selective Pressure}
+
+start with populations of tall tables
+
+\vspace{2ex}
+\pause
+
+\textbf{fitness:}
+$-\sigma(⃗\vec{x}) \textcolor{h2}{- |\mu(\vec{x})/10 |}$
+
+\vspace{2ex}
+\pause
+
+\textbf{intuition:}
+level-ness still essential, but short tables tend to be favored
+
+\vspace{2ex}
+\pause
+
+\textbf{question:}
+how well can short tables evolve under different G-P maps?
+
+\end{frame}
+
+
+\begin{frame}{Result: Response to Selective Pressure}
+
+\input{fig/select_response.tex}
+
+\end{frame}

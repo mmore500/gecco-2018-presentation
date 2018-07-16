@@ -1,0 +1,69 @@
+\section{Conclusion}
+
+\begin{frame}{Automap: Challenges (\& Solutions?)}
+
+\textbf{Manual G-P map design is difficult and highly heuristic\dots but deep
+learning implementation is too!}
+\pause
+\vspace{-1ex}
+\begin{itemize}[<+->]
+\itemsep0em
+\item learn better quality G-P maps than manually designed?
+\end{itemize}
+\vspace{-1ex}
+\pause
+\textbf{If you already need good solutions to train, why use automap?}
+\pause
+\vspace{-1ex}
+\begin{itemize}[<+->]
+\itemsep0em
+\item might yield even better solutions
+\item perhaps try iterative bootstrapping of G-P autoencoder maps in absence of good solutions
+\end{itemize}
+\vspace{-1ex}
+\pause
+\textbf{Computational cost of making training data.}
+\pause
+\vspace{-1ex}
+\begin{itemize}[<+->]
+\itemsep0em
+\item parallelism
+\end{itemize}
+\vspace{-1ex}
+\pause
+\textbf{Parts of phenotype space become totally inaccessible.}
+\pause
+\vspace{-1ex}
+\begin{itemize}[<+->]
+\itemsep0em
+\item inherent concern with indirect G-P maps \cite{clune2008generative}
+\item hopefully inaccessible parts aren't interesting
+\item perhaps use HybrID approach \cite{clune2009hybrid}
+\end{itemize}
+\vspace{-1ex}
+\pause
+\textbf{Autoencoder performance limitations}
+\pause
+\vspace{-1ex}
+\begin{itemize}[<+->]
+\itemsep0em
+\item ANN autoencoders: active area of research
+\item G-P autoencoder map could use other ``back end''
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Automap: Next Steps}
+
+\begin{itemize}[<+->]
+\item demonstrate automap on more challenging problem(s)
+\begin{itemize}
+\item move beyond proof of concept\dots
+\item try to show effects on evolvability \& solution quality
+\item soft-bodied robots (?)
+\end{itemize}
+\item explore using generative adversarial networks (GANs) in place of autoencoders
+\item put in conversation with learning theory \& evolvability synthesis \cite{kouvaris2017evolution}
+\end{itemize}
+
+\end{frame}

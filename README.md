@@ -1,6 +1,7 @@
-## Presentation Template
+## GECCO 2018 Presentation
 
-A LaTeX Beamer template for presentations using the Metropolis theme.
+For more information:
+[https://osf.io/n92c7/](https://osf.io/n92c7/)
 
 ### Authorship
 

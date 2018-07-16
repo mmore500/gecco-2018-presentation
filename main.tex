@@ -13,6 +13,23 @@
 \usepackage{tikz}
 \usepackage{bm}
 
+\usepackage{caption}
+\captionsetup{justification=raggedright,singlelinecheck=false}
+
+\usepackage{sidecap}
+\sidecaptionvpos{figure}{c}
+
+\usepackage{fontawesome}
+
+\usepackage{footnpag} %reset footnotes at every page
+
+\makeatother
+\renewcommand{\thefootnote}{\ifcase\value{footnote}\or*\or
+**\or***\or****\fi}
+\makeatletter
+
+\usepackage{xmpmulti}
+\usepackage{pgffor}
 \usepackage{multimedia}
 \usepackage{media9}
 
@@ -24,11 +41,22 @@
 \usepackage{xspace}
 \newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
 
-\title{TITLE}
-\subtitle{EVENT}
-\date{DATE}
-\author{Matthew Andres Moreno \newline \texttt{mmore500@msu.edu}}
-\titlegraphic{\hfill\includegraphics[height=2cm]{img/MSU-Wordmark-Black}}
+\definecolor{extralightgray}{gray}{0.85}
+
+\title{Learning an Evolvable Genotype-Phenotype Mapping}
+\subtitle{GECCO 2018}
+\date{July 17, 2018}
+\author{Matthew Andres Moreno \newline {\faTwitter} @MorenoMatthewA \newline}
+\titlegraphic{\vspace{32ex}\hfill\includegraphics[height=2.5cm]{img/BEACON-logo}}
+
+\usepackage{fix-cm}
+
+\makeatletter\newcommand\HUGE{\@setfontsize\Huge{28}{34}}\makeatother
+
+\definecolor{h1}{HTML}{d19a66}
+\definecolor{h2}{HTML}{36a8b8}
+
+\usepackage{xcolor}
 
 \begin{document}
 
@@ -39,8 +67,12 @@
 %   \tableofcontents[hideallsubsections]
 % \end{frame}
 
-\input{tex/section.tex}
-
+\input{tex/evolvability.tex}
+\input{tex/autoencoder.tex}
+\input{tex/learnmap.tex}
+\input{tex/toy.tex}
+\input{tex/scrabble.tex}
+\input{tex/conclusion.tex}
 \input{tex/appendix.tex}
 
 \input{tex/backup.tex}
