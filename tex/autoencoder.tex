@@ -64,12 +64,14 @@ We'll use autoencoders to do cool evolution things, I promise!
 \begin{frame}{Autoencoder Intuition}
 
 \vspace{1ex}
-
 {\Large
-\textbf{What does an autoencoder do?}
+\textbf{What does an autoencoder do?}%
+\only<5>{%
+\footnote{not just for faces!}
 }
+}%
 
-\vspace{2ex}
+\vspace{1ex}
 
 \begin{figure}
 
@@ -115,12 +117,15 @@ reconstructed input
 \end{column}
 \end{columns}
 
-\vspace{2ex}
+\vspace{1ex}
 \onslide<2->{
-\caption{Autoencoders take an input and then return a reconstructed input.}
+\caption{
+Autoencoders take an input and then return a reconstructed input.
+Graphics from \cite{white2016sampling}.
+}
 }
 \end{figure}
-
+\vspace{-3ex}
 \end{frame}
 
 \begin{frame}{Autoencoder Intuition}
@@ -424,7 +429,6 @@ Graphics from \cite{allen2018generative}.
 \item from arbitrary image, find nearest valid face
 \item exploit symmetries, correlations, and universal characteristics of faces
 \begin{itemize}[<+->]
-\item ex. usually, eye color is same left/right
 \item ex. blue eyes correlated with blond hair (?)
 \item ex. faces have same general eye-nose-mouth layout
 \end{itemize}
@@ -445,13 +449,18 @@ Graphics from \cite{allen2018generative}.
 \centering
 
 \HUGE
-\includegraphics[width=1em]{emoji-star}
+\onslide<3->{%
+\includegraphics[width=1em]{emoji-star}%
+}%
 ~deep learning
-\includegraphics[width=1em]{emoji-star}
+\onslide<3->{%
+\includegraphics[width=1em]{emoji-star}%
+}
 
 \normalsize
-
+\onslide<4->{
 (a.k.a. big artificial neural networks + big training data)
+}
 
 \end{frame}
 
