@@ -156,6 +156,8 @@ two superpowers:
 
 \end{frame}
 
+\section{Bottlenecked Autoencoder}
+
 \begin{frame}{Autoencoder Intuition: Bottlenecked}
 
 \begin{figure}
@@ -163,7 +165,7 @@ two superpowers:
   \centering
 
   \begin{columns}
-  \begin{column}{0.25\textwidth}
+  \begin{column}<2->{0.25\textwidth}
   \Large
   \centering
   \phantom{input}
@@ -173,7 +175,7 @@ two superpowers:
   \begin{column}{0.5\textwidth}
   \includegraphics[width=\textwidth]{img/stripped_bottleneck}
   \end{column}
-  \begin{column}{0.25\textwidth}
+  \begin{column}<4->{0.25\textwidth}
   \Large
   \centering
   ~\\[1.35ex]
@@ -186,7 +188,7 @@ two superpowers:
   \vspace*{-9.35ex}
 
   \makebox(0,0){
-    \includegraphics[width=0.1\textwidth]{static/static-1}\hspace{0.075ex}
+    \includegraphics<3->[width=0.1\textwidth]{static/static-1}\hspace{0.075ex}
   }
 
   \vspace*{9.35ex}
@@ -354,10 +356,13 @@ Graphics from \cite{white2016sampling}.
 
 \end{frame}
 
+\section{Denoising Autoencoder}
 
 \begin{frame}{Autoencoder Intuition: Denoising}
 
 \begin{figure}
+
+\vspace{5ex}
 
 \begin{columns}
 \begin{column}{0.3\textwidth}

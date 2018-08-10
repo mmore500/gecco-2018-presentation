@@ -3,6 +3,9 @@
 \begin{frame}{Remember This?}
 
 \begin{figure}
+
+\vspace{5ex}
+
 \begin{subfigure}[b]{\textwidth}
 \foreach \n in {6,...,1}{%
 \includegraphics[width=0.167\textwidth]{straight-guy/latent-\n}%
@@ -98,7 +101,7 @@ Hypothetical mutational trajectory on a fitness landscape with denoising genotyp
 \end{frame}
 
 \begin{frame}{Remember This?}
-  \vspace{2ex}
+  \vspace{6ex}
   \begin{figure}
   \begin{columns}
   \begin{column}{0.3\textwidth}
@@ -124,7 +127,7 @@ Hypothetical mutational trajectory on a fitness landscape with denoising genotyp
   \vspace{1ex}
   \caption{
   Autoencoder restoring masked section of image.
-  Graphics from \cite{white2016sampling}.
+  Graphics from \cite{allen2018generative}.
   }
   \end{figure}
 
@@ -230,10 +233,9 @@ How to get training data?
 \pause
 
 \begin{itemize}[<+->]
-\item survey local fitness peaks
+\item repeated evolutionary runs
 \begin{itemize}
-  \item repeated evolutionary runs with direct encoding
-  \item repeated evolutionary runs with manually-designed indirect encoding
+  \item ``survey local fitness peaks''
 \end{itemize}
 \item harness pre-existing data
 \begin{itemize}
