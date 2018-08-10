@@ -1,4 +1,32 @@
+\begin{frame}{Automap: Next Steps}
+
+\begin{itemize}[<+->]
+\item demonstrate automap on more challenging problem(s)
+\begin{itemize}
+\item move beyond proof of concept\dots
+\item try to show effects on evolvability \& solution quality
+\item soft-bodied robots (?)
+\end{itemize}
+\item explore using generative adversarial networks (GANs) in place of autoencoders
+\item put in conversation with learning theory \& evolvability synthesis \cite{kouvaris2017evolution}
+\end{itemize}
+
+\end{frame}
+
+
 \begin{frame}{Challenges + Solutions}
+
+\textbf{Manual G-P map design is difficult and highly heuristic\dots but deep
+learning implementation is too!}
+\pause
+\vspace{-1ex}
+\begin{itemize}[<+->]
+\itemsep0em
+\item learn better quality G-P maps than manually designed?
+\end{itemize}
+\vspace{-1ex}
+\pause
+
 
 \textbf{Computational cost of making training data.}
 \pause
@@ -109,6 +137,46 @@
 % \end{figure}
 %
 % \end{frame}
+
+\begin{frame}{Autoencoder Intuition: Denoising}
+
+\Large
+
+\textbf{Why does this work?}
+
+\pause
+
+\begin{itemize}[<+->]
+\item faces are a subset of all possible images
+\item from arbitrary image, find nearest valid face
+\item exploit symmetries, correlations, and universal characteristics of faces
+\begin{itemize}[<+->]
+\item ex. blue eyes correlated with blond hair (?)
+\item ex. faces have same general eye-nose-mouth layout
+\end{itemize}
+
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Autoencoder Intuition: Bottlenecked}
+
+\Large
+
+\textbf{Why does this work?}
+
+\pause
+
+\begin{itemize}[<+->]
+\pause
+\item faces are a subset of all possible images
+\pause
+\item don't need to specify which of all possible images, just need to specify which of all possible faces
+\end{itemize}
+
+\end{frame}
+
 
 \begin{frame}{Intuition: Denoising G-P Map = Glorified Spell Checker}
 
